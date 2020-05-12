@@ -1,71 +1,61 @@
 {
-    "name": "sas-syntax",
-    "displayName": "SAS-Syntax",
-    "description": "syntax highlighter for SAS",
-    "version": "1.0.8",
-    "publisher": "77qingliu",
-    "repository": "https://github.com/77QingLiu/vscode-SAS.tmLanguage",
-    "icon": "icon.png",
-    "homepage": "https://github.com/77QingLiu/vscode-SAS.tmLanguage",
-    "author": {
-        "name": "Qing Liu",
-        "url": "https://github.com/77qingliu"
-    },
-    "galleryBanner": {
-        "color": "#ADD8E6",
-        "theme": "light"
-    },
-    "bugs": {
-        "url": "https://github.com/pvparuchuri/vscode-SAS.tmLanguage/issues"
-    },
-    "engines": {
-        "vscode": "^1.20.0"
-    },
-    "categories": [
-        "Programming Languages",
-        "Snippets"
-    ],
-    "contributes": {
-        "languages": [
-            {
-                "id": "SAS",
-                "aliases": [
-                    "SAS",
-                    "Statistical Analysis System"
-                ],
-                "extensions": [
-                    ".sas"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "SAS",
-                "scopeName": "source.sas",
-                "path": "./syntaxes/sas.tmLanguage.json"
-            }
-        ],
-        "themes": [
-            {
-                "label": "SAS Theme",
-                "uiTheme": "vs",
-                "path": "./themes/SAS theme-color-theme.json"
-            }
-        ],
-        "snippets": [
-            {
-                "language": "SAS",
-                "path": "./snippets/sas.json"
-            },
-            {
-                "language": "SAS",
-                "path": "./snippets/function.json"
-            },
-            {
-                "language": "SAS",
-                "path": "./snippets/proc.json"
-            }
-        ]
-    }
+	"name": "sas-syntax",
+	"displayName": "SAS-Syntax",
+	"description": "syntax highlighter for SAS",
+	"version": "1.0.8",
+	"publisher": "77qingliu",
+	"repository": "https://github.com/77QingLiu/vscode-SAS.tmLanguage",
+	"icon": "icon.png",
+	"homepage": "https://github.com/77QingLiu/vscode-SAS.tmLanguage",
+	"author": {
+		"name": "Qing Liu",
+		"url": "https://github.com/77qingliu"
+	},
+	"bugs": {
+		"url": "https://github.com/pvparuchuri/vscode-SAS.tmLanguage/issues"
+	},
+	"engines": {
+		"vscode": "^1.20.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "sas",
+				"aliases": [
+					"SAS",
+					"Statistical Analysis System"
+				],
+				"extensions": [
+					".sas"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "sas",
+				"scopeName": "source.sas",
+				"path": "./syntaxes/sas.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "sas",
+				"path": "./snippets/sas.json"
+			},
+			{
+				"language": "sas",
+				"path": "./snippets/function.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "f359d228-4102-4ebe-bf06-6690b9a38780",
+		"publisherDisplayName": "77qingliu",
+		"publisherId": "49edca1a-641c-41ae-9bf2-abd0d694d139"
+	}
 }

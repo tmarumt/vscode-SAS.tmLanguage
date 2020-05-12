@@ -1,40 +1,52 @@
 {
-    "data step": {
-        "prefix": "data",
-        "body": [
-            "DATA $1;",
-            "\t$2",
-            "RUN;\n"
-        ],
-        "description": "data step"
-    },
-    "line comments": {
-        "prefix": "coli",
-        "body": [
-            "*---------------------------------------------- $1 ------------------------------------------------;"
-        ],
-        "description": "line comments"
-    },
-    "section comments": {
-        "prefix": "cosc",
-        "body": [
-            "*--------------------------------------------------------------------------------------------------;",
-            "*                                           $1",
-            "*--------------------------------------------------------------------------------------------------;"
-        ],
-        "description": "section comments"
-    },
-    "proc format":{
-        "prefix": "fmt",
-        "body":[
-            "PROC FORMAT;",
-            "\tvalue ${1:txtfmt}",
-            "\t\"$2\" = \"$3\"",
-            "\t\"$4\" = \"$5\"",
-            "\t\"$6\" = \"$7\"",
-            "\t;",
-            "RUN;\n$0"
-        ],
-        "description": "proc fromat"
-    }
+  "data step": {
+    "prefix": "data",
+    "body": ["data $1;", "\t$0", "run;"],
+    "description": "data step"
+  },
+  "if": {
+    "prefix": "if",
+    "body": ["if $1 then do;", "\t$2", "end;$0"],
+    "description": "if then do"
+  },
+  "else if": {
+    "prefix": "else_if",
+    "body": ["else if $1 then do;", "\t$2", "end;$0"],
+    "description": "else if then do"
+  },
+  "else do": {
+    "prefix": "else_do",
+    "body": ["else do;", "\t$2", "end;$0"],
+    "description": "else do"
+  },
+  "do loop": {
+    "prefix": "do_loop",
+    "body": ["do $1;", "\t$2", "end;$0"],
+    "description": "do loop"
+  },
+  "macro": {
+    "prefix": "macro",
+    "body": ["%macro $1($2);", "\t$0", "%mend;"],
+    "description": "macro"
+  },
+  "%if": {
+    "prefix": "%if",
+    "body": ["%if $1 %then %do;", "\t$2", "%end;$0"],
+    "description": "%if %then %do"
+  },
+  "%else %if": {
+    "prefix": "%else_%if",
+    "body": ["%else %if $1 %then %do;", "\t$2", "%end;$0"],
+    "description": "%else %if %then %do"
+  },
+  "%else %do": {
+    "prefix": "%else_%do",
+    "body": ["%else %do;", "\t$2", "%end;$0"],
+    "description": "%else %do"
+  },
+  "%do %loop": {
+    "prefix": "%do_%loop",
+    "body": ["%do $1;", "\t$2", "%end;$0"],
+    "description": "%do %loop"
+  }
 }
